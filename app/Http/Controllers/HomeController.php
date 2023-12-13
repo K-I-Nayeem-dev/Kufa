@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\Brand;
 use App\Models\Fact;
+use App\Models\Navbar;
 use App\Models\Recent;
 use App\Models\Service;
 use App\Models\Testimonial;
@@ -19,10 +20,6 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -36,7 +33,7 @@ class HomeController extends Controller
 
     public function welcome()
     {
-        $banner = Banner::select('banner_photo','banner_descriptions', 'banner_status')->first();
+        $banner = Banner::select('user_id','banner_photo','banner_descriptions', 'banner_status')->first();
         return view('welcome', [
             'banner' => $banner,
             'abouts' => About::orderBy('about_education', 'ASC')->get(),
@@ -46,6 +43,7 @@ class HomeController extends Controller
             'facts'=> Fact::all(),
             'testimonial'=> Testimonial::all(),
             'brands'=> Brand::all(),
+            'navbars' => Navbar::all()
         ]);
     }
 }

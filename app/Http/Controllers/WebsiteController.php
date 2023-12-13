@@ -37,6 +37,7 @@ class WebsiteController extends Controller
         $img->save(base_path('public/uploads/website_components_photos/banner_photos/' . $new_name), 80);
 
         Banner::insert([
+            'user_id' => auth()->id(),
             'banner_photo'=> $new_name,
             'banner_descriptions'=> $request->banner_descriptions,
             'banner_status'=> $request->banner_status,

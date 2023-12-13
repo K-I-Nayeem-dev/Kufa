@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Navbar;
 use App\Models\Recent;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -57,7 +58,8 @@ class RecntController extends Controller
     public function show(string $id)
     {
         $recent = Recent::find($id);
-        return view('layouts.dashboard.website_components.recent.show', compact('recent'));
+        $navbars = Navbar::all();
+        return view('layouts.dashboard.website_components.recent.show', compact('recent', 'navbars'));
     }
 
     /**

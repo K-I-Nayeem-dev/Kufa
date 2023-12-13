@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\RecntController;
 use App\Http\Controllers\FactController;
+use App\Http\Controllers\NavbarController;
 use App\Http\Controllers\TestimonialController;
 
 /*
@@ -29,7 +30,7 @@ Route::get('/',[HomeController::class, 'welcome'])->name('welcome');
 // Website Main Route
 
 // Dashboard Routes
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Dashboard Routes
 
 // Profile Routes
@@ -125,3 +126,5 @@ Route::get('contact/message/remove/{id}', [ContactController::class, 'contact_re
 
 
 // Website Components Routes
+// Navbar Routes
+Route::resource('navbar', NavbarController::class);

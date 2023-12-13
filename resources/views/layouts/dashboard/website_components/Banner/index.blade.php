@@ -9,6 +9,8 @@
                     <div class="card-body">
                         <table class="table table-dark table-striped">
                             <tr>
+                                <th>User ID</th>
+                                <th>User Name</th>
                                 <th>Banner Photo</th>
                                 <th>Banner Descriptions</th>
                                 <th>Banner Social Links</th>
@@ -17,6 +19,8 @@
                             </tr>
                             @foreach ($banners as $banner)
                                 <tr>
+                                    <td>{{ $banner->user_id }}</td>
+                                    <td>{{ $banner->getUserName->name }}</td>
                                     <td><img width="100" height="150" src="{{ asset('uploads/website_components_photos/banner_photos') }}/{{ $banner->banner_photo }}" alt=""></td>
                                     <td>{{ Str::limit($banner->banner_descriptions, 50) }}</td>
                                     <td>{{ $banner->banner_social_links }}</td>

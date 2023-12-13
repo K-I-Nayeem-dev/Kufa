@@ -56,11 +56,9 @@
                                     </button>
                                     <div class="collapse navbar-collapse" id="navbarNav">
                                         <ul class="navbar-nav ml-auto">
-                                            <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#service">service</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#portfolio">portfolio</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                                            @foreach ($navbars as $navbar)
+                                                <li class="nav-item {{ $navbar->links == 'home' ? 'active' : '' }}"><a class="nav-link" href="#{{ $navbar->links }}">{{ $navbar->name }}</a></li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                     <div class="header-btn">
@@ -122,8 +120,8 @@
                             @if ($banner['banner_status'] == 'active')
                                 <div class="banner-content">
                                     <h6 class="wow fadeInUp" data-wow-delay="0.2s">HELLO!</h6>
-                                    <h2 class="wow fadeInUp" data-wow-delay="0.4s">I am {{ Auth::user()->name }}</h2>
-                                    <p class="wow fadeInUp" data-wow-delay="0.6s">I'm {{ Auth::user()->name }},{{ $banner['banner_descriptions'] }}</p>
+                                    <h2 class="wow fadeInUp" data-wow-delay="0.4s">I am {{ $banner->getUserName->name }}</h2>
+                                    <p class="wow fadeInUp" data-wow-delay="0.6s">I'm {{ $banner->getUserName->name }},{{ $banner['banner_descriptions'] }}</p>
                                     <div class="banner-social wow fadeInUp" data-wow-delay="0.8s">
                                         <ul>
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>

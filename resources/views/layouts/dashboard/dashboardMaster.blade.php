@@ -781,6 +781,7 @@
 							<span class="nav-text" style="font-size: 12px">Upload Website Components</span>
 						</a>
                         <ul aria-expanded="false">
+							<li><a href="{{ route('navbar.create') }}">Navbar</a></li>
                             <li><a href="{{ route('banner') }}">Banner</a></li>
 							<li><a href="{{ route('about') }}">About Me</a></li>
 							<li><a href="{{ route('service') }}">Services</a></li>
@@ -795,6 +796,7 @@
                         <span class="nav-text" style="font-size: 12px">Edit/View Website Components</span>
                         </a>
                         <ul aria-expanded="false">
+                            <li><a href="{{ route('navbar.index') }}">Navbar</a></li>
                             <li><a href="{{ route('banner.index') }}">Banner</a></li>
                             <li><a href="{{ route('about_edit') }}">About</a></li>
                             <li><a href="{{ route('serviceView') }}">Services</a></li>
