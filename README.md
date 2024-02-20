@@ -7,60 +7,83 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Portfolio Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This is a portfolio web application built using Laravel and JavaScript. It allows users to upload photos, send emails, add icons, and dynamically change every component to showcase projects. The portfolio utilizes a JSON file to store project data.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Photo Upload: Users can upload photos to showcase their projects.
+<br>
+Email Sending: Visitors can send emails directly from the portfolio to contact the owner.
+<br>
+Icon Addition: Icons can be added to enhance the visual appeal of the portfolio.
+<br>
+Dynamic Component Change: Components dynamically change to display different projects stored in a JSON file.
+<br>
 
-## Learning Laravel
+## Technologies Used
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Laravel
+<br>
+JavaScript
+<br>
+JSON
+<br>
+HTML/CSS
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Installation
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Clone this repository to your local machine.
+<br>
+Install dependencies using Composer: composer install.
+<br>
+Install NPM dependencies: npm install.
+<br>
+Configure your environment variables by copying the .env.example file to .env and setting up the necessary values.
+<br>
+Generate application key: php artisan key:generate.
+<br>
+Migrate the database: php artisan migrate.
+<br>
+Seed the database (if necessary): php artisan db:seed.
 
-## Laravel Sponsors
+## Usage
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Start the Laravel development server: php artisan serve.
+<br>
+<br>
+Access the application in your web browser at http://localhost:8000.
+<br>
+Upload photos, add icons, and customize your portfolio as desired.
+<br>
+Visitors can view projects, send emails, and interact with the dynamically changing components.
 
-### Premium Partners
+## Folder Structure
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+app/ - Contains Laravel application files.
+<br>
+resources/ - Contains JavaScript, CSS, and view files.
+<br>
+database/ - Contains migrations and seeders.
+<br>
+public/ - Contains publicly accessible assets.
 
 ## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Contributions are welcome! Please fork this repository and submit a pull request with your enhancements.
 
 ## License
+This project is licensed under the MIT License.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Acknowledgements
+
+Laravel Documentation: https://laravel.com/docs
+<br>
+Font Awesome Icons: https://fontawesome.com/
+<br>
+JavaScript Documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+## Contact
+For any inquiries or issues, please contact Kamrul Islam Nayeem at kamrulnayeem019@gmail.com.
+<br>
+Feel free to customize this README according to your project's specific details and requirements.
