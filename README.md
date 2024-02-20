@@ -85,5 +85,7 @@ JavaScript Documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScrip
 
 ## Contact
 For any inquiries or issues, please contact Kamrul Islam Nayeem at kamrulnayeem019@gmail.com.
+
 <br>
+
 Feel free to customize this README according to your project's specific details and requirements.
